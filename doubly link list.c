@@ -98,8 +98,6 @@ void inserts(struct abc *head)
    new->prv = NULL;
    new->next = NULL;
    
-   new->next = NULL;
-   new->prv = NULL;
    head->next = new;
    new->prv = head;
    
@@ -115,10 +113,10 @@ void insertm(struct abc* head)
    
    new->prv = NULL;
    new->next = NULL;
-   new->next = head->next;
+  new->next = head->next;
    new->prv = head;
    head->next = new;
-   new->prv = head;
+ //  new->prv = head;
    new->next = temp;
    temp->prv = new;
 }
